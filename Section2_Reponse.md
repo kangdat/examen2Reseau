@@ -88,19 +88,19 @@ Soit le fichier « Dockerfile » suivant :
 
 |#  | Instruction|
 |---|---|
-|1||	
-|2||	
-|3||	
-|4||	
-|5||	
-|6||	
-|7||	
-|8||	
-|9||	
-|10||	
-|11||	
-|12||	
-|13||	
+|1|source pour le build|	
+|2|repertoir de travail selectionne|	
+|3|copier tout les fichier finissant par .sln|	
+|4|copier tout les fichier de aspnetapp terminant par csproj vers ./aspenetapp|	
+|5|executer dotnet restore|	
+|6|copier tout se qui se trouve dans aspnetapp vers aspnetapp|	
+|7|deplacer vers le repetoire de travaille app/aspnetapp|	
+|8|Executer dotnet publish avec les parametre c et o|	
+|9|rien|	
+|10|source pour le runtime|	
+|11|repertoire de travail /app|	
+|12|copy du build vers /app/aspnetapp/out./|	
+|13|les processus executer dans le containeur|	
 
 11- Dans un Dockerfile, expliquez la différence entre « ENTRYPOINT » et « CMD ». (1 point)
 
